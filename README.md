@@ -2,11 +2,11 @@
 
 A Chrome extension that provides instant speech-to-text transcription and translation for online meetings with sub-2-second latency.
 
-## 🎯 Overview
+##  Overview
 
 This Chrome extension seamlessly integrates with Google Meet to deliver real-time speech recognition and translation, enabling effortless multilingual communication in professional meetings. Built with Deepgram's Nova-3 API for speech recognition and Google Cloud Translate for translation services.
 
-## ✨ Features
+##  Features
 
 - **Real-time Transcription**: Live speech-to-text with 300-500ms latency
 - **Instant Translation**: Sub-2-second end-to-end translation
@@ -17,7 +17,7 @@ This Chrome extension seamlessly integrates with Google Meet to deliver real-tim
 - **Persistent Settings**: Remembers position and preferences
 - **Business-Ready**: Professional design suitable for corporate environments
 
-## 🚀 Quick Start
+##  Quick Start
 
 ### Prerequisites
 
@@ -58,7 +58,7 @@ This Chrome extension seamlessly integrates with Google Meet to deliver real-tim
    - Drag to reposition, resize as needed
    - Real-time transcription and translation display instantly
 
-## 🏗️ Architecture
+##  Architecture
 
 ### Core Components
 
@@ -94,7 +94,7 @@ graph LR
     H --> I[UI Display]
 ```
 
-## ⚙️ Configuration
+##  Configuration
 
 ### API Setup
 
@@ -119,7 +119,7 @@ The extension is pre-configured for optimal performance:
 - **VAD Threshold**: Tuned for meeting environments
 - **WebSocket Parameters**: Optimized for low latency
 
-## 🔧 Development
+##  Development
 
 ### Local Development
 
@@ -153,7 +153,7 @@ The extension is pre-configured for optimal performance:
 - **Background Script**: Extension details → Service worker → Console
 - **Audio Pipeline**: Check WebSocket connections in Network tab
 
-## 📊 Performance Metrics
+##  Performance Metrics
 
 | Metric | Target | Achieved |
 |--------|--------|----------|
@@ -163,7 +163,7 @@ The extension is pre-configured for optimal performance:
 | Memory Usage | < 50MB | 25-35MB |
 | CPU Impact | Minimal | < 5% |
 
-## 🔒 Privacy & Security
+##  Privacy & Security
 
 - **Local Processing**: Audio processed in browser, not stored
 - **Secure Transmission**: HTTPS/WSS connections only
@@ -171,21 +171,21 @@ The extension is pre-configured for optimal performance:
 - **No Data Retention**: No conversation data stored locally or remotely
 - **Permission Model**: Follows Chrome's security framework
 
-## 🌍 Language Support
+##  Language Support
 
 - **Speech Recognition**: 100+ languages via Deepgram Nova-3
 - **Translation**: 100+ language pairs via Google Translate
 - **Code-switching**: Automatic detection of language changes
 - **Regional Dialects**: Enhanced support for accents and variations
 
-## 🚧 Known Limitations
+##  Known Limitations
 
 - **Speaker Names**: Cannot extract actual participant names from Google Meet (privacy restriction)
 - **Platform Dependency**: Optimized for Google Meet (other platforms may have reduced functionality)
 - **Network Dependency**: Requires stable internet for real-time processing
 - **API Costs**: Usage depends on Deepgram and Google Cloud pricing
 
-## 🛠️ Troubleshooting
+##  Troubleshooting
 
 ### Common Issues
 
@@ -225,7 +225,7 @@ The extension is pre-configured for optimal performance:
    - Look for audio context errors
    - Check WebSocket connection status
 
-## 🤝 Contributing
+##  Contributing
 
 1. Fork the repository
 2. Create a feature branch (`git checkout -b feature/amazing-feature`)
@@ -240,18 +240,18 @@ The extension is pre-configured for optimal performance:
 - Maintain compatibility with Manifest V3
 - Document any new dependencies or APIs
 
-## 📄 License
+##  License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🙏 Acknowledgments
+##  Acknowledgments
 
 - [Deepgram](https://deepgram.com) for excellent real-time speech recognition
 - [Google Cloud Translate](https://cloud.google.com/translate) for reliable translation services
 - Chrome Extensions team for robust API framework
 - Open source community for inspiration and guidance
 
-## 📞 Support
+##  Support
 
 - **Issues**: [GitHub Issues](https://github.com/JLiebert73/realtime-gmeet-translator-final/issues)
   - [Deepgram Docs](https://developers.deepgram.com)
