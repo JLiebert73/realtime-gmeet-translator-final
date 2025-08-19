@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Meet Translator – Settings</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #0d1117;
+      color: rgba(255, 255, 255, 0.9);
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .header h1 {
+      font-size: 24px;
+      font-weight: 500;
+      color: rgba(255, 255, 255, 0.95);
+      margin-bottom: 8px;
+    }
+
+    .header p {
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 20px;
+      backdrop-filter: blur(10px);
+    }
+
+    .card-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+
+    .card-icon {
+      font-size: 18px;
+      margin-right: 12px;
+    }
+
+    .card-title {
+      font-size: 16px;
+      font-weight: 500;
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      font-size: 13px;
+      font-weight: 500;
+      color: rgba(255, 255, 255, 0.8);
+      margin-bottom: 8px;
+    }
+
+    input[type="password"], 
+    input[type="text"] {
+      width: 100%;
+      padding: 12px 16px;
+      font-size: 14px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.05);
+      color: rgba(255, 255, 255, 0.9);
+      font-family: 'Monaco', 'Menlo', 'Courier New', monospace;
+      transition: all 0.2s ease;
+    }
+
+    input[type="password"]:focus, 
+    input[type="text"]:focus {
+      outline: none;
+      border-color: rgba(100, 181, 246, 0.5);
+      background: rgba(255, 255, 255, 0.08);
+      box-shadow: 0 0 0 3px rgba(100, 181, 246, 0.1);
+    }
+
+    input::placeholder {
+      color: rgba(255, 255, 255, 0.4);
+    }
+
+    .button-group {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 8px 16px;
+      font-size: 12px;
+      font-weight: 500;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .btn-primary {
+      background: rgba(100, 181, 246, 0.2);
+      color: rgba(100, 181, 246, 0.9);
+      border: 1px solid rgba(100, 181, 246, 0.3);
+    }
+
+    .btn-primary:hover {
+      background: rgba(100, 181, 246, 0.3);
+      border-color: rgba(100, 181, 246, 0.5);
+    }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.05);
+      color: rgba(255, 255, 255, 0.7);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.1);
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    .status-message {
+      padding: 12px 16px;
+      border-radius: 8px;
+      margin-top: 12px;
+      font-size: 13px;
+      font-weight: 500;
+      display: none;
+    }
+
+    .status-success {
+      background: rgba(76, 175, 80, 0.15);
+      color: rgba(76, 175, 80, 0.9);
+      border: 1px solid rgba(76, 175, 80, 0.2);
+    }
+
+    .status-error {
+      background: rgba(244, 67, 54, 0.15);
+      color: rgba(244, 67, 54, 0.9);
+      border: 1px solid rgba(244, 67, 54, 0.2);
+    }
+
+    .setup-info {
+      background: rgba(255, 255, 255, 0.02);
+      border-radius: 8px;
+      padding: 16px;
+      margin-top: 16px;
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.6);
+      line-height: 1.5;
+    }
+
+    .setup-info a {
+      color: rgba(100, 181, 246, 0.8);
+      text-decoration: none;
+    }
+
+    .setup-info a:hover {
+      color: rgba(100, 181, 246, 1);
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 20px 16px;
+      }
+      
+      .card {
+        padding: 20px;
+      }
+      
+      .button-group {
+        flex-direction: column;
+      }
+    }
+  </style>
+  <script defer src="options.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>API Configuration</h1>
+      <p>Configure speech recognition and translation</p>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon">🎤</div>
+        <h2 class="card-title">Deepgram</h2>
+      </div>
+      
+      <div class="form-group">
+        <label for="dgKey">API Key</label>
+        <input id="dgKey" type="password" placeholder="dg_xxx..." autocomplete="off" />
+      </div>
+      
+      <div class="button-group">
+        <button id="save" class="btn btn-primary">Save</button>
+        <button id="reveal" class="btn btn-secondary">Show</button>
+        <button id="hide" class="btn btn-secondary" style="display: none;">Hide</button>
+        <button id="test" class="btn btn-secondary">Test</button>
+      </div>
+
+      <div id="dgStatus" class="status-message"></div>
+
+      <div class="setup-info">
+        Get API key: <a href="https://console.deepgram.com" target="_blank">console.deepgram.com</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon">🌐</div>
+        <h2 class="card-title">Google Translate</h2>
+      </div>
+      
+      <div class="form-group">
+        <label for="googleKey">API Key</label>
+        <input id="googleKey" type="password" placeholder="AIza..." autocomplete="off" />
+      </div>
+      
+      <div class="button-group">
+        <button id="saveGoogle" class="btn btn-primary">Save</button>
+        <button id="revealGoogle" class="btn btn-secondary">Show</button>
+        <button id="hideGoogle" class="btn btn-secondary" style="display: none;">Hide</button>
+        <button id="testGoogle" class="btn btn-secondary">Test</button>
+      </div>
+
+      <div id="googleStatus" class="status-message"></div>
+
+      <div class="setup-info">
+        Get API key: <a href="https://console.cloud.google.com" target="_blank">console.cloud.google.com</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
+

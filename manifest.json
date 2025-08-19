@@ -1,0 +1,53 @@
+{
+  "manifest_version": 3,
+  "name": "Meet Live Transcriber (Deepgram)",
+  "version": "1.0.0",
+  "description": "Streams Google Meet audio to Deepgram for live transcription with VAD and displays an on-page transcript box.",
+  "permissions": [
+    "activeTab",
+    "tabCapture",
+    "storage",
+    "offscreen",
+    "tabs",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://meet.google.com/*",
+    "https://api.deepgram.com/*",
+    "https://*.zoom.us/*",
+    "https://teams.microsoft.com/*",
+    "https://*.webex.com/*",
+    "https://app.slack.com/*",
+    "https://*.gotomeeting.com/*",
+    "https://*.bluejeans.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Meet Transcriber"
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'; connect-src 'self' https://api.deepgram.com wss://api.deepgram.com"
+  },
+  "options_page": "options.html",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://meet.google.com/*",
+        "https://*.zoom.us/*", 
+        "https://teams.microsoft.com/*",
+        "https://*.webex.com/*",
+        "https://app.slack.com/*",
+        "https://*.gotomeeting.com/*",
+        "https://*.bluejeans.com/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
+
+
