@@ -249,5 +249,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
   - [Google Translate Docs](https://cloud.google.com/translate/docs)
 
 ---
-
-**Built with ❤️ for seamless global communication**
