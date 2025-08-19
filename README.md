@@ -153,15 +153,6 @@ The extension is pre-configured for optimal performance:
 - **Background Script**: Extension details → Service worker → Console
 - **Audio Pipeline**: Check WebSocket connections in Network tab
 
-##  Performance Metrics
-
-| Metric | Target | Achieved |
-|--------|--------|----------|
-| Speech Recognition Latency | < 2s | 300-500ms |
-| Translation Processing | < 1s | 400-600ms |
-| End-to-End Latency | < 2s | 1.2-1.8s |
-| Memory Usage | < 50MB | 25-35MB |
-| CPU Impact | Minimal | < 5% |
 
 ##  Privacy & Security
 
