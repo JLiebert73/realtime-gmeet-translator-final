@@ -254,8 +254,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 📞 Support
 
 - **Issues**: [GitHub Issues](https://github.com/JLiebert73/realtime-gmeet-translator-final/issues)
-- **Documentation**: See `/docs` folder for detailed guides
-- **API Documentation**: 
   - [Deepgram Docs](https://developers.deepgram.com)
   - [Google Translate Docs](https://cloud.google.com/translate/docs)
 
