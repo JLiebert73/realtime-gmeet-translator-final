@@ -171,7 +171,6 @@ The extension is pre-configured for optimal performance:
 
 ##  Known Limitations
 
-- **Speaker Names**: Cannot extract actual participant names from Google Meet (privacy restriction)
 - **Platform Dependency**: Optimized for Google Meet (other platforms may have reduced functionality)
 - **Network Dependency**: Requires stable internet for real-time processing
 - **API Costs**: Usage depends on Deepgram and Google Cloud pricing
